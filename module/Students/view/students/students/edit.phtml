@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Update Student</title>
+</head>
+<body>
+  <form method="POST" action="/students/edit/<?=$data->id ?>">
+    <input type="hidden" name="id" value="<?= $data->id?>"  /><br/><br/>
+    Name :<input type="text" name="sname" value=<?=$data->sname ?> /><br/><br/>
+    Age : <input type="number" name="age" value=<?=$data->age ?> /><br/><br/>
+    <input type="hidden" name="class" value=<?=$data->class ?> />
+    <input type="submit" value="Update"/>
+  </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Update Student</title>
+</head>
+<body>
+  <form method="POST" action="/students/cedit/<?=$data->cid ?>">
+    <input type="hidden" name="cid" value="<?= $data->cid?>"  /><br/><br/>
+    Name :<input type="text" name="cname" value=<?=$data->cname ?> /><br/><br/>
+    <input type="submit" value="Update"/>
+  </form>
+</body>
+</html>
+<?php
+?>

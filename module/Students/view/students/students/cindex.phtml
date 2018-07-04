@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> Classes </title>
+</head>
+<body>
+<br/>
+<p id="test"><?=$senddata[0]['cname'] ?></p>
+<button onclick= "location.href='<?= $this->url('students', ['action' => 'cadd']) ?>'" class="btn btn-primary" >New</button>
+<br/>
+<table id="maintable" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($data as $clas) : ?>
+      <tr>
+        <td><?= $this->escapeHtml($clas->cname) ?></td>
+        <td>
+          <button onclick= "location.href='<?= $this->url('students', ['action' => 'index', 'cid' => $clas->cname]) ?>'" class="btn btn-primary" >View</button>
+        </td>
+        <td>
+          <button onclick= "location.href='<?= $this->url('students', ['action' => 'cedit', 'cid' => $clas->cid]) ?>'" class="btn btn-info" >Edit</button>
+        </td>
+        <td>
+          <button onclick= "location.href='<?= $this->url('students', ['action' => 'cdelete', 'cid' => $clas->cid]) ?>'" class="btn btn-danger" >Delete</button>
+        </td>
+      </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+</body>
+</html>

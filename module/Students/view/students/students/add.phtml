@@ -1,0 +1,14 @@
+<?php $url   = $this->url('students', ['action' => 'add']); ?>
+<html>
+<head>
+  <title> Add Student</title>
+</head>
+<body>
+  <form action="/students/add" method="POST">
+    Name : &nbsp;<input type="text" name="sname" id="sname"/><br/><br/>
+    Age : &nbsp;<input type="number" name="age" id="age" max="100"/><br/><br/>
+    &nbsp;<input type="hidden" name="class" id="class" value="<?=$cid ?>"/>
+    <input type="submit" value="submit"/>
+  </form>
+</body>
+</html>
